@@ -1,0 +1,1047 @@
+/* Start Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+/* End Font */
+
+/* start variable */
+:root{
+    --main-transition:0.5s;
+    --main-color:crimson;
+}
+/* End variable */
+
+/* Start Glopal Rules */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+ html{
+  scroll-behavior: smooth;
+  transition: 0.2s;
+} 
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background-color: red;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    margin: 0px auto; 
+    padding: 0px 30px;
+}
+
+@media screen and (min-width:768px){
+    .container{
+        width: 720px;
+    }
+}
+
+@media screen and (min-width:992px){
+    .container{
+        width: 960px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .container{
+        width:1140px;
+    }
+}
+
+section{
+    padding: 50px 0px;
+}
+
+::selection{
+    background-color: black;
+    color: yellow;
+}
+
+
+/* Start componits */
+.title{
+    text-align: center;
+    
+    text-transform: capitalize;
+    font-size: 35px;
+    position: relative;
+    padding-bottom: 33px;
+    margin-bottom: 30px;
+    font-family: 'ubuntu','sans-serif';
+
+}
+
+.title::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: black;
+    width: 250px;
+    height: 1px;
+}
+
+.title::after{
+    content: 'who i am ';
+    font-size: 23px;
+    bottom: -10px;
+    color: var(--main-color);
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* End componits */
+
+/* End Glopal Rules */
+
+/* Start header */
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    padding: 25px 0px;
+    /* background-color: ; */
+    z-index: 1000;
+    transition: all var(--main-transition);
+}
+/* ////// part scroll */
+header.sticky{
+    background-color: crimson;
+    padding: 15px;
+    /* width: 100%; */
+    transition: var(--main-transition);
+}
+
+header.sticky .menu li a:hover{
+    color: black;
+}
+/* ///////End part scroll */
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .logo a{
+    color: white;
+    font-size: 30px;
+    /* text-transform: capitalize; */
+}
+
+header .logo a .p{
+    font-size: 35px ;
+    margin: 1px;
+}
+
+header .logo a .lio{
+    color: var(--main-color);
+}
+
+.navbar{
+    transition: var(--main-transition);
+}
+
+.navbar .menu{
+    display: flex;
+
+}
+.navbar .menu li a{
+    display: block;
+    margin-right: 50px;
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    position: relative;
+}
+.navbar .menu li a::after{
+    content: '';
+    transition: all var(--main-transition);
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    left: 0;
+    bottom: -7px;
+    background-color: var(--main-color);
+}
+
+.navbar .menu li a:hover::after{
+    width: 100%;
+}
+
+
+.navbar .menu li a::before{
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--main-color);
+    transition: all var(--main-transition);
+}
+
+.navbar .menu li a:hover::before{
+width: 100%;
+}
+
+
+.navbar .menu li a:hover{
+    color: var(--main-color);
+   
+}
+
+
+.menu-toggle{
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+.navbar.active{
+    left:0;
+}
+
+/* Start media */
+
+@media screen and (max-width:950px){
+    
+    .navbar{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #1c1c1c;
+        /* border: 1px solid red; */
+        top: 0;
+        text-align: center;
+        left:-100%;
+    }
+    .navbar .menu{
+        display: block;
+        padding: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .navbar .menu li a{
+        font-size: 30px;
+        text-align: center;
+        margin: 50px 0px;
+
+    }
+
+
+    .menu-toggle{
+        display: block;
+        z-index: 900;
+        position: relative;
+    }
+
+    .menu-toggle i.active::before{
+        content:'\f00d';
+        font-size: 30px;
+    }
+
+}
+
+/* End Media */
+
+
+/* End header */
+
+/* Start Landing */
+
+.landing{
+    position: relative;
+    background-image: url(../img/box1.png);
+    background-color: #1c1c1c;
+    background-repeat: no-repeat;
+    background-position: 106% 99%;
+    background-size: 50%;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.landing .container .text{
+    position: absolute;
+    left:200px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    /* background-color: red; */
+    padding: 30px;
+    width: 25%;
+}
+
+.landing .text h4{
+    font-size: 20px;
+}
+
+.landing .text h1{
+    font-size: 50px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin: 6px 0px;
+}
+
+.landing .text p{
+    font-size: 25px;
+
+}
+
+.landing .text p span{
+    color: var(--main-color);
+}
+
+.landing .text .btn{
+    color: white;
+    padding: 16px 30px;
+    margin: 24px 0px;
+    background-color: var(--main-color);
+    border: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 14px;
+    transition: all var(--main-transition);
+    border: 2px solid var(--main-color);
+}
+
+.landing .text .btn:hover{
+    background: none;
+    color: var(--main-color);
+
+}
+
+
+.landing .container .star1{
+    position: absolute;
+    top: 30%;
+    left: 82%;
+    width: 5%;
+    height: 5%;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.landing .container .star2{
+    position: absolute;
+    top: 27%;
+    left: 76%;
+    width: 5%;
+    height: 5%;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.landing .container .star3{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 5%;
+    height: 5%;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+} 
+
+
+
+@media screen and (max-width:950px){
+    .landing{
+        background-position: 106% 38%;
+    }
+
+   .landing .container .text{
+        width: 100%;
+        /* position: absolute; */
+        left: 0px;
+
+        
+    }
+
+   
+}
+
+
+.landing .pre{
+    position: absolute;
+    left: 8%;
+    top: 70%;
+    color: white;
+    display: flex;
+    
+}
+
+.landing .pre .inner{
+    width: 300px;
+    height: 150px;
+    background-color: red;
+    line-height: 150px;
+    font-size: 50px;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.landing .pre .inner:nth-child(1){
+    background-color: #ff0055;
+    color: white;
+    transform-origin: right;
+    transform: perspective(100px) rotateY(-15deg);
+}
+
+.landing .pre .inner:nth-child(2){
+    background-color: #ffff00;
+    color: black;
+    transform-origin:left ;
+    transform: perspective(100px) rotateY(15deg);
+}
+
+
+.landing .pre .inner span{
+    position: absolute;
+    left: -100%;
+    animation: animate 6s linear infinite;
+
+}
+
+.landing .pre .inner:nth-child(2) span{
+    animation-delay: 3s;
+    color: var(--main-color);
+}
+
+@keyframes animate{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:200px) and (max-width:767px){
+    .landing .container .text h1{
+        font-size: 30px;
+    }
+
+    .landing .container .text h4{
+        font-size: 15px;
+    }
+
+    .landing .container .text p{
+        font-size: 20px;
+    }
+
+}
+
+
+
+/* End Landing */
+
+/* Start About */
+
+.about .title::before{
+    background-color: #1c1c1c;
+}
+
+.about .title::after{
+    background-color: white;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about .content-img{
+    width: 100%;
+    text-align: center;
+
+}
+
+.about .content-img img{
+    width: 70%;
+    border-radius: 15px;
+    margin: 30px 0px;
+}
+
+
+.about .text-content{
+    max-width: 100%;
+}
+
+.about .text-content h3{
+    font-size: 25px;
+    /* margin-bottom: 10px; */
+}
+.about .text-content h3 .typing-2{
+    color: var(--main-color);
+}
+
+.about .text-content p{
+    text-align: justify;
+    margin: 20px 0px;
+}
+
+.about .text-content a{
+    /* padding: 40px;
+    background-color: var(--main-color); */
+    padding: 17px 20px;
+    background-color: var(--main-color);
+    margin: 20px px;
+    display: block;
+    width: fit-content;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    transition: var(--main-transition);
+    border: 2px solid var(--main-color);
+}
+
+.about .text-content a:hover{
+    background: none;
+    color: var(--main-color);
+
+}
+
+/* End About */
+
+/* Start Services */
+.services{
+    background-color: #1c1c1c;
+    color: white;
+    width: 100%;
+}
+
+.services .title::before{
+    background-color: white;
+}
+
+.services .title::after{
+  content: 'What i provide';
+  color: var(--main-color);
+  background-color: #1c1c1c;
+}
+
+.services .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .card{
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px var(--main-color);
+    padding: 50px;
+    margin: 20px;
+    width: 310px;
+    text-align: center;
+    transition: all var(--main-transition);
+    text-align: center;
+    position: relative;
+}
+
+.services .card i{
+    font-size: 40px;
+    color: var(--main-color);
+    transition: all var(--main-transition);
+}
+
+.services .card .text{
+    font-size: 25px;
+    text-transform: capitalize;
+    margin: 15px 0px;
+}
+
+.services .card::after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height:0;
+width: 0;
+border-radius: 15px;
+background-color: var(--main-color);
+z-index: -1;
+transition: all var(--main-transition);
+
+}
+.services .card:hover i{
+    color: white;
+}
+
+.services .card:hover::after{
+width: 100%;
+height: 100%;
+}
+
+.services .card:hover {
+    transform: scale(1.1);
+   
+}
+
+@media screen and (max-width:950px){
+    .services .container{
+        flex-direction: column;
+    }
+
+    .services .container .card{
+        width: 90%;
+    }
+
+}
+
+
+
+/* End Services */
+
+/* Start Skills */
+
+.skills .title::before{
+    background-color: #1c1c1c;
+}
+
+.skills .title::after{
+    content: 'what i know';
+    background-color: white;
+}
+
+.skills .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .text{
+    width: 80%;
+    padding: 20px;
+
+}
+
+.skills .text h3{
+    font-size: 21px;
+    text-transform: capitalize;
+}
+
+.skills .text p{
+    margin: 10px 0px 15px;
+    text-align: justify;
+
+}
+
+.skills .text .read{
+    padding: 15px;
+    background-color: var(--main-color);
+    display: block;
+    width: fit-content;
+    color: white;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid var(--main-color);
+}
+
+.skills .text .read:hover{
+background: none;
+color: var(--main-color);
+}
+@media screen and (max-width:950px){
+    .skills .container{
+        flex-direction: column;
+    }
+    .skills .text{
+
+        width: 100%;
+    }
+}
+
+
+.skills2{
+    position: relative;
+    left: 38px;
+    width: 100%;
+    top: -17px;
+}
+
+.skills2 h3{
+    margin-bottom:20px ;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+
+.skills2 .skills-list .skill-name{
+font-weight: bold;
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+.skills2 .skills-list .skill-name::after{
+    background-color: #999797;
+    content: '';
+    height: 20px;
+    display: block;
+    position:relative;
+    top: 4px;
+    /* width: 100px; */
+
+}
+
+.skill-percent{
+    position: relative;
+    bottom: 26px;
+    font-size: 0;
+    height: 20px;
+    transition: var(--main-transition) linear;
+    width: 0;
+}
+
+.skill-percent-html{
+background-color:  #ff0055;
+}
+
+.skill-percent-css{
+    background-color:  #ff5c00;
+    }
+
+.skill-percent-javascript{
+        background-color:  #00b1db;
+        }
+.skill-percent-php{
+    background-color:  #ffc100;
+         }
+
+@media screen and (max-width:600px){
+    .skills2{
+        width: 100%;
+        margin-top: 50px;
+        margin-right: 45px;
+    }
+}
+/* End Skills */
+
+/* Start teams */
+
+.teams {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.title::before{
+    background-color: white;
+}
+
+.title::after{
+    content:'who with me';
+    color:var(--main-color);
+    background-color: #1c1c1c;
+}
+
+/* .teams .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+} */
+
+
+
+.teams .carousel .card{
+    width: 300px;
+    padding:20px 40px;
+    height: 260px;
+    
+    background-color: #222;
+    box-shadow: 0px 0px 6px var(--main-color);
+    margin: 20px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+
+.teams .carousel .card:hover{
+    background-color: var(--main-color);
+}
+
+.teams .carousel .card img{
+    width: 65%;
+    margin-left: 48px;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid var(--main-color);
+}
+
+.teams .carousel .card:nth-child(3) img{
+    width:65%;
+    height: 65%;
+}
+.teams .carousel .card:nth-child(4) img{
+    height: 65%;
+}
+
+.teams .carousel .card h3{
+    margin: 6px 0px;
+    font-size: 25px;
+}
+
+.carousel button.owl-dot{
+background-color: red;
+}
+
+
+.owl-dots{
+    text-align: center;
+    margin-top:20px ;
+}
+
+
+.owl-dot{
+    width: 13px;
+    height: 13px;
+    margin:0px 5px ;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid var(--main-color) !important;
+    transition: all var(--main-transition);
+}
+
+.owl-dot.active{
+    /* background-color: var(--main-transition) !important; */
+    width: 35px;
+    border-radius: 15px;
+}
+
+.owl-dot.active,.owl-dot:hover{
+    background-color: var(--main-color) !important;
+}
+
+
+
+@media screen and (min-width:200px) and (max-width:730px) {
+
+    .teams .carousel .card{
+        width: 80%;
+        margin: 20px auto; 
+        height: 240px;
+    }
+
+    .teams .carousel .card img{
+        width: 60%;
+        margin: 0px auto;
+    }
+
+    .teams .carousel .card:nth-child(3) img{
+        height: 53%;
+        object-fit: cover;
+    }
+}    
+
+
+/* End teams */
+/* Start angle up */
+.angle-up-btn{
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+    text-align: center;
+    z-index: 10000;
+    border-radius: 7px;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all var(--main-transition);
+}
+.angle-up-btn i{
+    font-size: 30px;
+    color: white;
+    line-height: 40px;
+}
+
+.angle-up-btn.show{
+   
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.angle-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+
+/* End angle up */
+
+/* Start Contact */
+.contact .title::before{
+ background-color: #1c1c1c;
+}
+
+.contact .title::after{
+ content: 'get in touch';
+ background-color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.contact .content1 {
+    margin: 20px 0px;
+}
+
+.contact .content1 h3{
+   text-transform: capitalize;
+   font-size: 20px;
+
+}
+.contact .content1 .text-con{
+    margin: 20px 0px;
+}
+
+.contact .content1 .personal{
+    padding: 13px;
+    padding-left: 37px;
+    position: relative;
+}
+.contact .content1 .personal i{
+    position: absolute;
+    left: 0;
+    top: 23px;
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.contact .content1 .personal h4{
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+.contact .content1 .personal p{
+    color:#3b3a3a;
+    
+}
+
+
+.contact .content2 h3{
+    margin: 20px 0px;
+    text-transform: capitalize;
+}
+
+.content2 form input:nth-child(1),
+.content2 form input:nth-child(2)
+{
+
+    width: 48%;
+    margin-right: 5px;
+    padding: 9px 7px;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid lightgray;
+}
+
+.content2 form input[data-sub='sub']{
+    width: 98%;
+    padding: 9px 8px;
+    margin: 20px 0px;
+    outline: none;
+    border-radius: 12px;
+    border: 2px solid lightgray;
+}
+
+.content2 form textarea{
+    width: 98%;
+    height: 86px;
+    padding: 8px;
+    outline: none;
+    overflow: none;
+    font-size: 17px;
+    border: 2px solid lightgray;
+    margin-bottom: 40px;
+    resize: none;
+}
+
+
+.content2 form .send{
+    padding: 15px 10px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 15px;
+}
+
+
+@media screen and (min-width:200px)  and (max-width:768px){
+    .contact .container{
+      flex-direction: column;
+    }
+
+    .content2 form input:nth-child(1),
+.content2 form input:nth-child(2){
+    width: 100%;
+    margin: 10px  0px;
+}
+
+}
+
+/* End Contact */
+
+/* Start Footer */
+
+footer{
+    background-color: #1c1c1c;
+    
+    padding: 20px 0px;
+    width: 100%;
+    text-align: center;
+   
+}
+
+footer p{
+    color: white;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+footer p span{
+    color: var(--main-color);
+}
+
+
+/* End Footer */

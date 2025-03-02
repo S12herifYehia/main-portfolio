@@ -1,6 +1,6 @@
 if("serviceWorker" in navigator){
     // navigator // هو عباره عن السجل المدني للمتصفح بتاعي 
-    navigator.serviceWorker.register('../sw.js',{
+    navigator.serviceWorker.register('/sw.js',{
         scope:'/'
     }).then((reg)=>{
         console.log("File is register",reg)

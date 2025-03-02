@@ -1,0 +1,45 @@
+{
+    "short_name":"Portfolio_Sherif",
+    "name":"Portfolio_Eltorki",
+    "start_url":"/",
+    "description":"My Portfolio App",
+    "scope":"/",
+    "display":"standalone",
+    "orientation":"any",
+    "theme_color":"#000000",
+    "background_color":"#ed143d",
+    "icons":[
+        {
+            "src":"https://s12herifyehia.github.io/Template2/img/icon/1.png",
+            "sizes":"72x72",
+            "type":"image/png"
+        },
+        {
+            "src":"https://s12herifyehia.github.io/Template2/img/icon/2.png",
+            "sizes":"96x96",
+            "type":"image/png"
+        },
+        {
+            "src":"https://s12herifyehia.github.io/Template2/img/icon/3.png",
+            "sizes":"128x128",
+            "type":"image/png"
+        },
+        {
+            "src":"https://s12herifyehia.github.io/Template2/img/icon/4.png",
+            "sizes":"152x152",
+            "type":"image/png"
+        },
+        {
+            "src":"https://s12herifyehia.github.io/Template2/img/icon/5.png",
+            "sizes":"384x384",
+            "type":"image/png"
+        },
+        {
+            "src":"https://s12herifyehia.github.io/Template2/img/icon/6.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+
+    ]
+
+}

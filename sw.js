@@ -19,6 +19,7 @@ let assets=[
     "/js/main.js",
     "/js/jquery.js",
     "/js/app.js",
+    "/sw.js",
     "/manifest.json",
 ]
 // لو الخط جايبه من بره احط اللينك عادي بدون اسلاش 
